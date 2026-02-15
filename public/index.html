@@ -3,33 +3,49 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Urban Dictionary Search</title>
 
     <!-- Reset CSS -->
-    <link
-        rel="stylesheet"
-        href="https://cdn.jsdelivr.net/npm/reset-css@3.0.0/reset.min.css"
-    />
+    <link rel="stylesheet"
+          href="https://cdn.jsdelivr.net/npm/reset-css@3.0.0/reset.min.css">
 
     <!-- Google Font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700&display=swap" rel="stylesheet">
-
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700&display=swap"
+          rel="stylesheet">
 
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="/assets/css/style.css" />
-
+    <link rel="stylesheet" href="/assets/css/style.css">
 </head>
+
 <body>
-<h1>Urban Dictionary Search</h1>
 
-<input type="text" id="searchTerm" placeholder="Enter a word">
-<button onclick="searchWord()">Search</button>
+    <main class="container">
 
-<p id="loading"></p>
-<p id="result"></p>
+        <!-- Page Title -->
+        <header>
+            <h1>Urban Dictionary Search</h1>
+        </header>
 
-<script src="/assets/js/script.js"></script>
+        <!-- Search Section -->
+        <section class="search-area">
+            <input type="text"
+                   id="searchTerm"
+                   placeholder="Enter a word"
+                   autocomplete="off">
+
+            <button id="searchButton">Search</button>
+        </section>
+
+        <!-- Results Section -->
+        <section class="result-area">
+            <p id="loading" aria-live="polite"></p>
+            <div id="result"></div>
+        </section>
+
+    </main>
+
+    <script src="/assets/js/script.js"></script>
 </body>
 </html>
